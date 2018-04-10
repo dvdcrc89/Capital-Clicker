@@ -1,0 +1,33 @@
+/* CSS declarations go here */
+.game{
+  display: flex;
+    justify-content:baseline;
+}
+.question {
+    width: 200px;
+    height: 100px;
+    border: 2px black solid;
+    background: blue;
+
+}
+.answer1{
+    width: 200px;
+    height: 100px;
+    border: 2px black solid;
+
+}
+.answer2{
+    width: 200px;
+    height: 100px;
+    border: 2px black solid;
+    background:red;
+
+}
+
+.game p{
+
+    padding:10%;
+    font-size: 4vh;
+    font-weight: 300;
+    font-family: fantasy;
+}
