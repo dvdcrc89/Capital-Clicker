@@ -7,7 +7,12 @@
     width: 300px;
     height: 200px;
     border: 2px black solid;
-    background: whitesmoke;
+    background-image: url("../img/background1");
+    background-size: cover;
+
+    border-radius: 10%;
+
+
 
 }
 .answer1{
@@ -15,13 +20,21 @@
     width: 300px;
     height: 200px;
     border: 2px black solid;
-    background: white;
+    background-image: url("../img/background1");
+    background-size: cover;
+    border-radius: 10%;
+
 }
 .answer2{
     width:300px;
     height: 200px;
     border: 2px black solid;
-    background:white;
+
+    background-image: url("../img/background1");
+    background-size: cover;
+    border-radius: 10%;
+    
+
 
 }
 
@@ -49,20 +62,30 @@
     display: flex;
     justify-content: space-around;
     font-size: 5vh;
-    font-weight: 300;
+    font-weight: 600;
     font-family: fantasy;
-    background: black;
-    color: white;
+    color: black;
+    margin:20px;
+
+
 }
+
 body{
     background-image: url("../img/background");
-    background-position: center;
+
+
 }
 
 .upgrade{
         border: 2px solid black;
-        background: black;
+        background: transparent;
         height: 50px;
+    margin:20px;
+    background-image: url("../img/background1");
+    background-size: cover;
+    background-size: 50px;
+
+
 }
 
 .upgrade button{
