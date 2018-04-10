@@ -7,7 +7,7 @@
     width: 300px;
     height: 200px;
     border: 2px black solid;
-    background-image: url("../img/background1");
+    background-image: url("../img/background2");
     background-size: cover;
 
     border-radius: 10%;
@@ -33,7 +33,7 @@
     background-image: url("../img/background1");
     background-size: cover;
     border-radius: 10%;
-    
+
 
 
 }
@@ -43,16 +43,9 @@
     text-align: center;
     font-size: 10vh;
     font-weight: 300;
-    font-family: fantasy;
-}
-
-.witff {
-    font-size: 2vh;
-    font-weight: 100;
-    font-family: fantasy;
+    font-family: 'Mouse Memoirs', sans-serif;}
 
 
-}
 .canvas{
     width: 70%;
     margin: 10% auto;
@@ -63,7 +56,7 @@
     justify-content: space-around;
     font-size: 5vh;
     font-weight: 600;
-    font-family: fantasy;
+    font-family: 'Mouse Memoirs', sans-serif;
     color: black;
     margin:20px;
 
@@ -91,4 +84,14 @@ body{
 .upgrade button{
     padding:15px;
     height: 50px    ;
+}
+
+.endedGame{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12vh;
+    font-weight: 500;
+    font-family: 'Mouse Memoirs', sans-serif;
+
 }

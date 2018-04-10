@@ -3,6 +3,7 @@ import Signup from "./signup";
 import {Accounts} from "meteor/accounts-base";
 import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
+import ReactPlayer from 'react-player';
 const shuffle = require('shuffle-array');
 
 const questions = [{
@@ -152,10 +153,15 @@ export default class Game extends React.Component {
                          </div>
                             )
              case 2:
-                    return (<div>
+                    return (
+                        <div className={"wrapper"}>
+                        <div className={"endedGame"}>
+
+                            <ReactPlayer url='https://www.youtube.com/embed/o6IjyOuUMHY?ecver=2' playing />
                             <p> You Scored : {this.state.points}</p>
                              <button onClick={this.reset.bind(this)}>Start another Game</button>
-                            </div>)
+                            </div>
+                        </div>)
         }
 
     }
