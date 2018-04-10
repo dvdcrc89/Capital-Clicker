@@ -81,19 +81,58 @@ export default class Game extends React.Component {
     shoufflePicks(){
 
         const answersPicks = [{
-                answer: <div className={"answer1"} key={"right"} onClick={this.getRight.bind(this)}><p>{this.state.current.answer}</p></div>
+                answer: <div className={"answer1"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
              },
             {
-                answer:  <div className={"answer2"} key={"wrong"} onClick={this.getWrong.bind(this)}><p>{this.state.current.wrong}</p></div>
+                answer:  <div className={"answer2"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
             }];
 
         shuffle(answersPicks);
-        return (<div>
-            {answersPicks[0].answer}
-            {answersPicks[1].answer}
-        </div>)
+        return (
+            <div className={"game"}>
+                {answersPicks[0].answer}
+                <div className={"question"}><p className={"word"}> {this.state.current.question}</p></div>
+                {answersPicks[1].answer}
+            </div>)
     }
 
+
+    buyUpgrade() {
+
+        const upgrade = [];
+        if (this.state.points>10) upgrade.push(<button onClick={()=>{
+                                                                     this.setState({
+                                                                     points:this.state.points -10,
+                                                                     pointsPerClick: this.state.pointsPerClick+10
+                                                                     })}}>10</button>)
+
+        if (this.state.points>100) upgrade.push(<button onClick={()=>{
+            this.setState({
+                points:this.state.points -100,
+                pointsPerClick: this.state.pointsPerClick+100
+            })}}>100</button>)
+
+        if (this.state.points>1000) upgrade.push(<button onClick={()=>{
+            this.setState({
+                points:this.state.points -1000,
+                pointsPerClick: this.state.pointsPerClick+1000
+            })}}>1000</button>)
+        if (this.state.points>10000) upgrade.push(<button onClick={()=>{
+            this.setState({
+                points:this.state.points -10000,
+                pointsPerClick: this.state.pointsPerClick+10000
+            })}}>10000</button>)
+        if (this.state.points>100000) upgrade.push(<button onClick={()=>{
+            this.setState({
+                points:this.state.points -100000,
+                pointsPerClick: this.state.pointsPerClick+100000
+            })}}>100000</button>)
+
+
+        return ( <div className={"upgrade"}>{upgrade}</div>)
+
+
+    }
 
     parseGame(){
 
@@ -101,14 +140,17 @@ export default class Game extends React.Component {
             case 0:
                     return(<button onClick={this.reset.bind(this)}>Start Game</button>)
             case 1:
-                    return (<div>
-                            <p>Points : {this.state.points}</p>
-                            <p> Lifes: {this.state.lifes}</p>
-                            <div className={"game"}>
-                                <div className={"question"}><p>{this.state.current.question}</p></div>
+                    return (
+                        <div className={"canvas"}>
+                                <div className={"stats"}>
+                                <p>Points: {this.state.points}</p>
+                                    <p>Points per Click: {this.state.pointsPerClick}</p>
+                                <p> Lifes: {this.state.lifes}</p>
+                                </div>
                                 {this.shoufflePicks()}
-                            </div>
-                            </div>)
+                                {this.buyUpgrade()}
+                         </div>
+                            )
              case 2:
                     return (<div>
                             <p> You Scored : {this.state.points}</p>
@@ -117,8 +159,10 @@ export default class Game extends React.Component {
         }
 
     }
+
+
     render(){
-        return(<div>
+        return(<div className={"wrapper"}>
                     {this.parseGame()}
                     <button onClick={() => {
                         this.onLogout() }}>Logout

@@ -4,30 +4,68 @@
     justify-content:baseline;
 }
 .question {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
     border: 2px black solid;
-    background: blue;
+    background: whitesmoke;
 
 }
 .answer1{
-    width: 200px;
-    height: 100px;
-    border: 2px black solid;
 
+    width: 300px;
+    height: 200px;
+    border: 2px black solid;
+    background: white;
 }
 .answer2{
-    width: 200px;
-    height: 100px;
+    width:300px;
+    height: 200px;
     border: 2px black solid;
-    background:red;
+    background:white;
 
 }
 
-.game p{
-
-    padding:10%;
-    font-size: 4vh;
+.word{
+    margin-top:20%;
+    text-align: center;
+    font-size: 10vh;
     font-weight: 300;
     font-family: fantasy;
+}
+
+.witff {
+    font-size: 2vh;
+    font-weight: 100;
+    font-family: fantasy;
+
+
+}
+.canvas{
+    width: 70%;
+    margin: 10% auto;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    font-size: 5vh;
+    font-weight: 300;
+    font-family: fantasy;
+    background: black;
+    color: white;
+}
+body{
+    background-image: url("../img/background");
+    background-position: center;
+}
+
+.upgrade{
+        border: 2px solid black;
+        background: black;
+        height: 50px;
+}
+
+.upgrade button{
+    padding:15px;
+    height: 50px    ;
 }
