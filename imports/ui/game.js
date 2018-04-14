@@ -4,25 +4,17 @@ import {Accounts} from "meteor/accounts-base";
 import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
 import ReactPlayer from 'react-player';
+import {capitals} from './capital'
 const shuffle = require('shuffle-array');
 
-const questions = [{
-    question: "Dog",
-    answer: "Cane",
-    wrong: "Gatto"
-},{
-    question: "Cat",
-    answer: "Gatto",
-    wrong: "Cane"
-},{
-    question: "Bird",
-    answer: "Uccello",
-    wrong: "Gatto"
-},{
-    question: "Red",
-    answer: "Rosso",
-    wrong: "Blue"
-}];
+const questions = capitals.map((cap) =>{
+    return ({
+        question: cap.country,
+        answer: cap.city,
+        wrong: shuffle(capitals)[0].city
+            })
+    })
+
 
 let index = 0;
 
@@ -85,15 +77,19 @@ export default class Game extends React.Component {
                 answer: <div className={"answer1"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
              },
             {
-                answer:  <div className={"answer2"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
-            }];
+                answer:  <div className={"answer1"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
+            }];150
 
         shuffle(answersPicks);
         return (
             <div className={"game"}>
-                {answersPicks[0].answer}
                 <div className={"question"}><p className={"word"}> {this.state.current.question}</p></div>
+
+                <div className={"answers"}>
+                {answersPicks[0].answer}
                 {answersPicks[1].answer}
+                </div>
+
             </div>)
     }
 
@@ -101,7 +97,7 @@ export default class Game extends React.Component {
     buyUpgrade() {
 
         const upgrade = [];
-        if (this.state.points>10) upgrade.push(<button onClick={()=>{
+        if (this.state.points>10) upgrade.push(<button className={"points10"} onClick={()=>{
                                                                      this.setState({
                                                                      points:this.state.points -10,
                                                                      pointsPerClick: this.state.pointsPerClick+10
@@ -146,7 +142,7 @@ export default class Game extends React.Component {
                                 <div className={"stats"}>
                                 <p>Points: {this.state.points}</p>
                                     <p>Points per Click: {this.state.pointsPerClick}</p>
-                                <p> Lifes: {this.state.lifes}</p>
+                                    <p> Lifes: {this.state.lifes}</p>
                                 </div>
                                 {this.shoufflePicks()}
                                 {this.buyUpgrade()}

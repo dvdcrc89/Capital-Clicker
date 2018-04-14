@@ -1,16 +1,18 @@
 /* CSS declarations go here */
 .game{
   display: flex;
-    justify-content:baseline;
+    justify-content: stretch;
+
 }
 .question {
-    width: 300px;
+    width: 350px;
     height: 200px;
     border: 2px black solid;
-    background-image: url("../img/background2");
-    background-size: cover;
+    /*background-image: url("../img/background2");*/
+    background: black;
 
     border-radius: 10%;
+    color: white;
 
 
 
@@ -23,11 +25,12 @@
     background-image: url("../img/background1");
     background-size: cover;
     border-radius: 10%;
+    margin: 10px;
 
 }
 .answer2{
-    width:300px;
-    height: 200px;
+    width:250px;
+    height: 150px;
     border: 2px black solid;
 
     background-image: url("../img/background1");
@@ -48,7 +51,7 @@
 
 .canvas{
     width: 70%;
-    margin: 10% auto;
+    margin: 0 auto;
 }
 
 .stats{
@@ -57,7 +60,7 @@
     font-size: 5vh;
     font-weight: 600;
     font-family: 'Mouse Memoirs', sans-serif;
-    color: black;
+    color: white;
     margin:20px;
 
 
@@ -65,25 +68,35 @@
 
 body{
     background-image: url("../img/background");
-
-
-}
-
-.upgrade{
-        border: 2px solid black;
-        background: transparent;
-        height: 50px;
-    margin:20px;
-    background-image: url("../img/background1");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-size: 50px;
+
 
 
 }
+
+/*.upgrade{*/
+    /*border: 2px solid black;*/
+    /*background: transparent;*/
+    /*height: 50px;*/
+    /*margin:20px;*/
+    /*background-image: url("../img/background1");*/
+    /*background-size: cover;*/
+    /*background-size: 50px;*/
+
+
+/*}*/
 
 .upgrade button{
     padding:15px;
-    height: 50px    ;
+    height: 100px;
+    width: 100px;
+    background-image: url("../img/background2");
+    background-position: center;
+    background-size: 120px;
+    color: red;
+    font-size: 7vh;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 
 .endedGame{
@@ -94,4 +107,20 @@ body{
     font-weight: 500;
     font-family: 'Mouse Memoirs', sans-serif;
 
+}
+
+.answers{
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.points10 {
+    width: 100px;
+    background-image: url("../img/background2");
+    background-position: center;
+    background-size: 120px;
+    color: red;
+    font-size: 7vh;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
