@@ -23,17 +23,18 @@ export default class Game extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            current:questions[0],
+            current:shuffle(questions)[0],
             pointsPerClick:1,
             lifes: 4,
             points:0,
-            state:0
+            state:0,
+            message:null
         }
     }
 
     reset(){
         this.setState({
-            current:questions[0],
+            current:shuffle(questions)[0],
             pointsPerClick:1,
             lifes: 4,
             points:0,
@@ -49,7 +50,8 @@ export default class Game extends React.Component {
 
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
-            points: this.state.points + this.state.pointsPerClick
+            points: this.state.points + this.state.pointsPerClick,
+            message: "Well done! The capital of " + this.state.current.question +" is "+ this.state.current.answer
         })
     }
 
@@ -60,6 +62,8 @@ export default class Game extends React.Component {
             this.setState({
                 lifes: this.state.lifes - 1,
                 current: shuffle.pick((questions), {picks: '1'}),
+                message: "You have got it wrong this time, The capital of " + this.state.current.question +" is "+ this.state.current.answer
+
 
             })
         }
@@ -96,34 +100,44 @@ export default class Game extends React.Component {
 
     buyUpgrade() {
 
-        const upgrade = [];
-        if (this.state.points>10) upgrade.push(<button className={"points10"} onClick={()=>{
-                                                                     this.setState({
-                                                                     points:this.state.points -10,
-                                                                     pointsPerClick: this.state.pointsPerClick+10
-                                                                     })}}>10</button>)
 
-        if (this.state.points>100) upgrade.push(<button onClick={()=>{
+        const plus5 = <div className={"up"} onClick={()=>{
+            this.setState({
+            points:this.state.points -5,
+            pointsPerClick: this.state.pointsPerClick+5
+        })}}>
+        <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (5 points)</p></div>
+
+        const plus100 = <div className={"up"} onClick={()=>{
             this.setState({
                 points:this.state.points -100,
                 pointsPerClick: this.state.pointsPerClick+100
-            })}}>100</button>)
+            })}}>
+            <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+100</bold></p><p className={"red"}>(100 points)</p></div>
 
-        if (this.state.points>1000) upgrade.push(<button onClick={()=>{
+        const life = <div className={"up"} onClick={()=>{
             this.setState({
                 points:this.state.points -1000,
-                pointsPerClick: this.state.pointsPerClick+1000
-            })}}>1000</button>)
-        if (this.state.points>10000) upgrade.push(<button onClick={()=>{
+                lifes: this.state.lifes+1
+            })}}>
+            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(1000 points)</p> </div>
+
+        const plus25 = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -10000,
-                pointsPerClick: this.state.pointsPerClick+10000
-            })}}>10000</button>)
-        if (this.state.points>100000) upgrade.push(<button onClick={()=>{
-            this.setState({
-                points:this.state.points -100000,
-                pointsPerClick: this.state.pointsPerClick+100000
-            })}}>100000</button>)
+                points:this.state.points -25,
+                pointsPerClick: this.state.pointsPerClick+25
+            })}}>
+            <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (25 points)</p></div>
+
+        const upgrade = [];
+        if (this.state.points>1) upgrade.push(plus5);
+
+        if (this.state.points>2) upgrade.push(plus25);
+
+        if (this.state.points>3) upgrade.push(plus100);
+
+
+        if (this.state.points>4) upgrade.push(life);
 
 
         return ( <div className={"upgrade"}>{upgrade}</div>)
@@ -138,6 +152,7 @@ export default class Game extends React.Component {
                     return(<button onClick={this.reset.bind(this)}>Start Game</button>)
             case 1:
                     return (
+                        <div className={"fullScreen"}>
                         <div className={"canvas"}>
                                 <div className={"stats"}>
                                 <p>Points: {this.state.points}</p>
@@ -145,9 +160,16 @@ export default class Game extends React.Component {
                                     <p> Lifes: {this.state.lifes}</p>
                                 </div>
                                 {this.shoufflePicks()}
-                                {this.buyUpgrade()}
+                                <div className={"footerGame"}>
+                                    <p>   {this.state.message}</p>
+                                </div>
                          </div>
-                            )
+                            <div className={"upgradeSection"}>
+                                <h1>Upgrades</h1>
+                                {this.buyUpgrade()}
+                            </div>
+                        </div>
+                                )
              case 2:
                     return (
                         <div className={"wrapper"}>

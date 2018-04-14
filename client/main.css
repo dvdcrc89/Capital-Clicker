@@ -8,8 +8,10 @@
     width: 350px;
     height: 200px;
     border: 2px black solid;
+    font-size: 6vh;
+
     /*background-image: url("../img/background2");*/
-    background: black;
+    background:rgba(0,0,0,0.9);
 
     border-radius: 10%;
     color: white;
@@ -18,11 +20,13 @@
 
 }
 .answer1{
-
+    font-size: 9vh;
     width: 300px;
     height: 200px;
     border: 2px black solid;
-    background-image: url("../img/background1");
+    /*background-image: url("../img/background1");*/
+    background:rgba(255,255,255,0.6);
+
     background-size: cover;
     border-radius: 10%;
     margin: 10px;
@@ -44,7 +48,6 @@
 .word{
     margin-top:20%;
     text-align: center;
-    font-size: 10vh;
     font-weight: 300;
     font-family: 'Mouse Memoirs', sans-serif;}
 
@@ -124,3 +127,54 @@ body{
     font-size: 7vh;
     font-family: 'Mouse Memoirs', sans-serif;
 }
+.footerGame{
+    text-align: center;
+    margin: 0 auto;
+    background:rgba(0,0,0,0.9);
+    padding: 3%;
+    opacity: 100%;
+    color: white;
+    font-size: 4vh;
+    font-weight: 900;
+}
+
+.red{
+    color:red;
+}
+
+.fullScreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.upgradeSection{
+    width: 25%;
+    background:rgba(0,0,0,0.9);
+    margin-top: 5%;
+    border: 1px solid white;
+
+}
+.upgradeSection h1{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: black;
+    background: white;
+    text-align: center;
+    font-size: 6vh;
+    border: 1px solid white;
+}
+
+.up{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background:rgba(0,0,0,0.9);
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 600;
+    border: 1px solid white;
+}
+.up img{
+    width: 50px;
+    height: 50px;
+}
+
