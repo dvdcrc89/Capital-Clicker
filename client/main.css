@@ -370,8 +370,9 @@ body{
 
 }
 .question-battle {
+    margin-left: 80px;
     width: 200px;
-    height: 200px;
+    height: 100px;
     border: 2px black solid;
     font-size: 4vh;
 

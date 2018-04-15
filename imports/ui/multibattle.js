@@ -3,11 +3,11 @@ import Signup from "./signup";
 import {Accounts} from "meteor/accounts-base";
 import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
-import ReactPlayer from 'react-player';
 import {capitals} from './capital'
 import {Battle} from "../api/battle";
 import {Leaderboard} from "../api/leaderboard";
 import {Tracker} from "meteor/tracker";
+import FlipMove from 'react-flip-move';
 
 const shuffle = require('shuffle-array');
 
@@ -48,9 +48,8 @@ export default class Game extends React.Component {
         this.battleTracker.stop();
     }
     fetchData(){
-        const results = this.state.ranking;
 
-        return (results.map((result)=>{ return (<div className={"score-battle"}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
+        return (this.state.ranking.map((result)=>{ return (<div className={"score-battle"} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
     }
 
     reset(){
@@ -189,7 +188,9 @@ export default class Game extends React.Component {
                     <div className={"fullScreen"}>
                         <div className={"ranking-battle upgradeSection"}>
                             <h1>Players online</h1>
-                            {this.fetchData()}
+                            <FlipMove duration={750} easing="ease-out" maintainContainerHeight="true">
+                                {this.fetchData()}
+                            </FlipMove>
                         </div>
                         <div className={"canvas-battle"}>
 
