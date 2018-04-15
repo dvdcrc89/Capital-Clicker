@@ -26,7 +26,7 @@
     border: 2px black solid;
     /*background-image: url("../img/background1");*/
     background:rgba(255,255,255,0.6);
-
+    cursor: pointer;
     background-size: cover;
     border-radius: 10%;
     margin: 10px;
@@ -62,11 +62,17 @@
     justify-content: space-around;
     font-size: 5vh;
     font-weight: 600;
+
     font-family: 'Mouse Memoirs', sans-serif;
     color: white;
     margin:20px;
 
 
+}
+.back{
+    width:50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 body{
@@ -118,15 +124,6 @@ body{
 
 }
 
-.points10 {
-    width: 100px;
-    background-image: url("../img/background2");
-    background-position: center;
-    background-size: 120px;
-    color: red;
-    font-size: 7vh;
-    font-family: 'Mouse Memoirs', sans-serif;
-}
 .footerGame{
     text-align: center;
     margin: 0 auto;
@@ -141,10 +138,13 @@ body{
 .red{
     color:red;
 }
+.blue{
+    color:blue;
+}
 
 .fullScreen{
     width: 100%;
-    height: 100%;
+    height: 600px;
     display: flex;
     justify-content: space-between;
 }
@@ -172,9 +172,98 @@ body{
     font-family: 'Mouse Memoirs', sans-serif;
     font-weight: 600;
     border: 1px solid white;
+    cursor:pointer;
 }
 .up img{
     width: 50px;
     height: 50px;
 }
 
+.up:hover{
+    background: black;
+    color: blue;
+
+}
+
+.menu{
+
+    display: block;
+    margin: 200px auto;
+    width: 60%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 600;
+    font-size: 6vh;
+    color:white;
+    background:  rgba(0,0,0,0.9);
+    text-align: center;
+    border:1px solid white;
+
+
+}
+.menu h1{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: black;
+    background: white;
+    text-align: center;
+    font-size: 6vh;
+    border: 1px solid white;
+
+}
+.menu-odd {
+
+    border: 1px white solid;
+    cursor: pointer;
+
+}
+.menu-even{
+    border: 1px white solid;
+    cursor: pointer;
+
+}
+
+.menu-odd:hover {
+    color:red;
+    border: 1px white solid;
+    background: black;
+}
+.menu-even:hover{
+    color:blue;
+    background: black;
+
+    border: 1px white solid;
+}
+
+
+.rankingWrapper{
+
+}
+.ranking{
+    display: block;
+    margin: 0px auto;
+    width: 60%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 600;
+    font-size: 6vh;
+    color:white;
+    background:  rgba(0,0,0,0.9);
+    text-align: center;
+    border:1px solid white;
+}
+.ranking h1{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: black;
+    background: white;
+    text-align: center;
+    font-size: 6vh;
+    border: 1px solid white;
+
+}
+.score{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color:white;
+    font-size: 3vh;
+    border: 1px white solid;
+    padding:0;
+}

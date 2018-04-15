@@ -16,8 +16,6 @@ const questions = capitals.map((cap) =>{
     })
 
 
-let index = 0;
-
 
 export default class Game extends React.Component {
     constructor(props){
@@ -70,6 +68,7 @@ export default class Game extends React.Component {
     }
 
     endGame(){
+                Meteor.call("leaderboard.insert",this.state.points);
                 this.setState({
                     state:2
                 })
@@ -130,14 +129,14 @@ export default class Game extends React.Component {
             <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
 
         const upgrade = [];
-        if (this.state.points>=10) upgrade.push(plus5);
+        if (this.state.points>=1) upgrade.push(plus5);
 
-        if (this.state.points>=50) upgrade.push(plus25);
+        if (this.state.points>=2) upgrade.push(plus25);
 
-        if (this.state.points>=100) upgrade.push(plus100);
+        if (this.state.points>=3) upgrade.push(plus100);
 
 
-        if (this.state.points>=1000) upgrade.push(life);
+        if (this.state.points>=4) upgrade.push(life);
 
 
         return ( <div className={"upgrade"}>{upgrade}</div>)
@@ -145,16 +144,32 @@ export default class Game extends React.Component {
 
     }
 
+    renderMenu(){
+        return (<div className={"menu"}>
+            <h1> Game Menu</h1>
+            <div className={"menu-odd"} onClick={this.reset.bind(this)}>Start Game</div>
+            <div className={"menu-even"} onClick={()=>history.push('/leaderboard')}>Leaderboard</div>
+            <div className={"menu-odd"} onClick={this.onLogout.bind(this)}>World Map</div>
+            <div className={"menu-even"} onClick={this.reset.bind(this)}>Settings</div>
+            <div className={"menu-odd"} onClick={this.onLogout.bind(this)}>Logout</div>
+        </div>)
+    }
+
+
+
     parseGame(){
 
         switch(this.state.state){
             case 0:
-                    return(<button onClick={this.reset.bind(this)}>Start Game</button>)
+                    return (this.renderMenu())
             case 1:
                     return (
                         <div className={"fullScreen"}>
                         <div className={"canvas"}>
-                                <div className={"stats"}>
+
+                            <div className={"stats"}>
+                                <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
+
                                 <p>Points: {this.state.points}</p>
                                     <p>Points per Click: {this.state.pointsPerClick}</p>
                                     <p> Lifes: {this.state.lifes}</p>
@@ -165,6 +180,7 @@ export default class Game extends React.Component {
                                 </div>
                          </div>
                             <div className={"upgradeSection"}>
+
                                 <h1>Upgrades</h1>
                                 {this.buyUpgrade()}
                             </div>
@@ -188,9 +204,6 @@ export default class Game extends React.Component {
     render(){
         return(<div className={"wrapper"}>
                     {this.parseGame()}
-                    <button onClick={() => {
-                        this.onLogout() }}>Logout
-                    </button>
         </div>)
     }
 }

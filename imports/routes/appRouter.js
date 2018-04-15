@@ -5,7 +5,8 @@ import Signup from "../ui/signup";
 import createHistory from 'history/createBrowserHistory'
 import Login from "../ui/login";
 import {Router, Switch, Route} from 'react-router-dom';
-import Game from  '../ui/game'
+import Game from  '../ui/game';
+import Ranking from '../ui/ranking'
 
 export const history = createHistory();
 
@@ -38,7 +39,7 @@ export const AppRouter = () => (
             <Route exact path="/signup" component={Signup}/>
 
             <Route exact path="/game" component={Game}/>
-            {/*<Route exact path="/prova" component={Prova}/>*/}
+            <Route exact path="/leaderboard" component={Ranking}/>
 
 
             {/*<Route component={NotFound}/>*/}
