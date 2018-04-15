@@ -49,7 +49,11 @@ export default class Game extends React.Component {
     }
     fetchData(){
 
-        return (this.state.ranking.map((result)=>{ return (<div className={"score-battle"} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
+        return (this.state.ranking.map((result)=>{
+            let classN="score-battle";
+            console.log(Meteor.userId() +"  " + result.userId);
+            if (result.userId===Meteor.userId()) classN='you score-battle';
+            return (<div className={classN} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
     }
 
     reset(){
@@ -195,7 +199,7 @@ export default class Game extends React.Component {
                         <div className={"canvas-battle"}>
 
                             <div className={"stats"}>
-                                <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
+                                <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>history.push("/")}/>
 
                                 <p>Points: {this.state.points}</p>
                                 <p>Points per Click: {this.state.pointsPerClick}</p>

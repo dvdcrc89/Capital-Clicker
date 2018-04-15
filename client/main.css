@@ -410,7 +410,12 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
+.you{
+    background: black;
+    color:blue;
+    font-size:4vh;
 
+}
 .canvas-battle{
     width: 50%;
     margin: 0 auto;
