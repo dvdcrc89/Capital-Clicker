@@ -267,3 +267,65 @@ body{
     border: 1px white solid;
     padding:0;
 }
+
+
+.signlog{
+    display: block;
+    margin: 100px auto;
+    width: 60%;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-weight: 600;
+    font-size: 6vh;
+    color:white;
+    background:  rgba(0,0,0,0.9);
+    text-align: center;
+    border:1px solid white;
+}
+.signlog h1{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: black;
+    background: white;
+    text-align: center;
+    font-size: 6vh;
+    border: 1px solid white;
+
+}
+
+.signlog form{
+    width: 75%;
+    margin-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.signlog input{
+    height: 50px;
+    width: 700px;
+    background: transparent;
+    color:white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 6vh;
+    text-align: center;
+}
+
+.signlog button{
+    background: transparent;
+    color:white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 6vh;
+    float:right;
+}
+
+.signlog a {
+    border: 2px solid white;
+    background: white;
+    padding:10px;
+    color:black;
+    text-decoration: none;
+}

@@ -45,15 +45,15 @@ export default class Signup extends React.Component{
     render(){
 
         return (
-            <div>
+            <div className={"signlog"}>
                 <h1>Sign up to Baguette Clicker</h1>
                 {this.state.error ? <p>{this.state.error}</p> : undefined}
                 <form onSubmit={this.onSubmit.bind(this)} noValidate>
-                    <input type="email" name="email" ref="email" placeholder="Email"/>
-                    <input type="password" name="password" ref="password" placeholder="Password"/>
+                    <ul> <input type="email" name="email" ref="email" placeholder="Username"/></ul>
+                   <ul> <input type="password" name="password" ref="password" placeholder="Password"/></ul>
                     <button>Create Account</button>
                 </form>
-                <Link to="/">Go Back</Link>
+                <Link to="/">Already have an account?</Link>
             </div>
              );
     }

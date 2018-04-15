@@ -43,12 +43,12 @@ export default class Login extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className={"signlog"}>
                 <h1>Login to Baguette Clicker</h1>
                 {this.state.error ? <p>{this.state.error}</p> : undefined}
                 <form onSubmit={this.onSubmit.bind(this)} noValidate>
-                    <input type="email" name="email" ref="email" placeholder="Email"/>
-                    <input type="password" name="password" ref="password" placeholder="Password"/>
+                    <ul><input type="email" name="email" ref="email" placeholder="Username"/></ul>
+                    <ul><input type="password" name="password" ref="password" placeholder="Password"/></ul>
                     <button>Login</button>
                 </form>
                 <Link to="/signup">

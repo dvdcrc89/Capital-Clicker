@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f2d45b-f582-44c2-92c4-866c399b4541" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/imports/api/leaderboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/style/_ranking.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imports/ui/ranking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/routes/appRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/routes/appRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/ranking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/signup.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,15 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="appRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/routes/appRouter.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,10 +35,11 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-end-line="5" />
+            <state relative-caret-position="131">
+              <caret line="123" column="59" lean-forward="true" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
               <folding>
-                <marker date="1523783698408" expanded="true" signature="4701:4791" ph="..." />
+                <element signature="e#0#26#0" expanded="true" />
+                <marker date="1523784124203" expanded="true" signature="4706:4796" ph="..." />
               </folding>
             </state>
           </provider>
@@ -68,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="223">
+              <caret line="32" column="114" selection-start-line="32" selection-start-column="114" selection-end-line="32" selection-end-column="114" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -89,6 +78,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="signup.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/signup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/main.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,11 +99,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="capital.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/capital.js">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2679">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="247">
+              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,8 +114,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
+            <state relative-caret-position="330">
+              <caret line="325" column="28" selection-start-line="325" selection-start-column="28" selection-end-line="325" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -137,8 +141,6 @@
         <option value="$PROJECT_DIR$/imports/api/ui/login.js" />
         <option value="$PROJECT_DIR$/imports/api/ui/signup.js" />
         <option value="$PROJECT_DIR$/imports/api/routes/appRouter.js" />
-        <option value="$PROJECT_DIR$/imports/ui/signup.js" />
-        <option value="$PROJECT_DIR$/imports/ui/login.js" />
         <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/imports/ui/capital.js" />
         <option value="$PROJECT_DIR$/imports/style/animate.css" />
@@ -147,10 +149,12 @@
         <option value="$PROJECT_DIR$/imports/ui/leaderboard.js" />
         <option value="$PROJECT_DIR$/imports/routes/appRouter.js" />
         <option value="$PROJECT_DIR$/imports/style/_ranking.css" />
-        <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/imports/api/leaderboard.js" />
         <option value="$PROJECT_DIR$/imports/ui/game.js" />
         <option value="$PROJECT_DIR$/imports/ui/ranking.js" />
+        <option value="$PROJECT_DIR$/imports/ui/login.js" />
+        <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/ui/signup.js" />
       </list>
     </option>
   </component>
@@ -240,7 +244,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js.meteor.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../score-keep" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../restaurant-manager" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -279,12 +283,12 @@
       <updated>1523262293871</updated>
       <workItem from="1523262299942" duration="5498000" />
       <workItem from="1523351127743" duration="21455000" />
-      <workItem from="1523736071915" duration="20421000" />
+      <workItem from="1523736071915" duration="22143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47374000" />
+    <option name="totallyTimeSpent" value="49096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -380,7 +384,8 @@
         <state relative-caret-position="1605">
           <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
           <folding>
-            <marker date="1523783698408" expanded="true" signature="4701:4791" ph="..." />
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1523784124203" expanded="true" signature="4706:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -404,7 +409,8 @@
         <state relative-caret-position="615">
           <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
           <folding>
-            <marker date="1523783698408" expanded="true" signature="4701:4791" ph="..." />
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1523784124203" expanded="true" signature="4706:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -454,26 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="191" selection-start-line="3" selection-start-column="191" selection-end-line="3" selection-end-column="191" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -536,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="241" column="13" selection-start-line="241" selection-start-column="13" selection-end-line="241" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/leaderboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -553,20 +532,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
+    <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-end-line="5" />
+        <state relative-caret-position="223">
+          <caret line="32" column="114" selection-start-line="32" selection-start-column="114" selection-end-line="32" selection-end-column="114" />
           <folding>
-            <marker date="1523783698408" expanded="true" signature="4701:4791" ph="..." />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
+    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="131">
+          <caret line="123" column="59" lean-forward="true" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1523784124203" expanded="true" signature="4706:4796" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="325" column="28" selection-start-line="325" selection-start-column="28" selection-end-line="325" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="55" column="53" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

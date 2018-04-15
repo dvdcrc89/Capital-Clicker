@@ -119,7 +119,7 @@ export default class Game extends React.Component {
                 points:this.state.points -1000,
                 lifes: this.state.lifes+1
             })}}>
-            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(1000 points)</p> </div>
+            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
 
         const plus25 = <div className={"up"} onClick={()=>{
             this.setState({
@@ -129,14 +129,14 @@ export default class Game extends React.Component {
             <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
 
         const upgrade = [];
-        if (this.state.points>=1) upgrade.push(plus5);
+        if (this.state.points>=10) upgrade.push(plus5);
 
-        if (this.state.points>=2) upgrade.push(plus25);
+        if (this.state.points>=50) upgrade.push(plus25);
 
-        if (this.state.points>=3) upgrade.push(plus100);
+        if (this.state.points>=100) upgrade.push(plus100);
 
 
-        if (this.state.points>=4) upgrade.push(life);
+        if (this.state.points>=500) upgrade.push(life);
 
 
         return ( <div className={"upgrade"}>{upgrade}</div>)
