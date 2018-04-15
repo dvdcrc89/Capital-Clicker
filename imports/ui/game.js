@@ -190,10 +190,9 @@ export default class Game extends React.Component {
                     return (
                         <div className={"wrapper"}>
                         <div className={"endedGame"}>
+                            <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
 
-                            <ReactPlayer url='https://www.youtube.com/embed/o6IjyOuUMHY?ecver=2' playing />
-                            <p> You Scored : {this.state.points}</p>
-                             <button onClick={this.reset.bind(this)}>Start another Game</button>
+                            <h1>Congratulation! You Scored {this.state.points} Points</h1>
                             </div>
                         </div>)
         }
