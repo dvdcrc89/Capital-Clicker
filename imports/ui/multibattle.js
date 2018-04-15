@@ -174,8 +174,8 @@ export default class Game extends React.Component {
     renderMenu(){
         return (<div className={"menu"}>
             <h1> Multi Battle</h1>
-            <div className={"menu-odd"} onClick={this.reset.bind(this)}>Join the battle</div>
-
+            <div className={"menu-odd"} onClick={this.reset.bind(this)}>Join the battle </div>
+            <p>Players online: {this.state.ranking.length} </p>
         </div>)
     }
 
@@ -207,9 +207,9 @@ export default class Game extends React.Component {
                             </div>
 
                             {this.shoufflePicks()}
-                            {/*<div className={"footerGame"}>*/}
-                                {/*<p>   {this.state.message}</p>*/}
-                            {/*</div>*/}
+                            <div className={"footerGame"}>
+                                <p>   {this.state.message}</p>
+                            </div>
                         </div>
                         <div className={"upgradeSection"}>
 

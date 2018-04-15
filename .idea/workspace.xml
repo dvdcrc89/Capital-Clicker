@@ -19,8 +19,8 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2265">
-              <caret line="151" column="74" selection-start-line="151" selection-start-column="74" selection-end-line="151" selection-end-column="74" />
+            <state relative-caret-position="-998">
+              <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-end-line="71" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <marker date="1523810145274" expanded="true" signature="4706:4810" ph="..." />
@@ -113,8 +113,8 @@
       <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="148" column="137" selection-start-line="148" selection-start-column="137" selection-end-line="148" selection-end-column="137" />
+            <state relative-caret-position="104">
+              <caret line="177" column="31" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -293,12 +293,12 @@
       <updated>1523262293871</updated>
       <workItem from="1523262299942" duration="5498000" />
       <workItem from="1523351127743" duration="21455000" />
-      <workItem from="1523736071915" duration="30082000" />
+      <workItem from="1523736071915" duration="31268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57035000" />
+    <option name="totallyTimeSpent" value="58221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -594,17 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="151" column="74" selection-start-line="151" selection-start-column="74" selection-end-line="151" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1523810145274" expanded="true" signature="4706:4810" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -612,10 +601,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-998">
+          <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1523810145274" expanded="true" signature="4706:4810" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="148" column="137" selection-start-line="148" selection-start-column="137" selection-end-line="148" selection-end-column="137" />
+        <state relative-caret-position="104">
+          <caret line="177" column="31" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
