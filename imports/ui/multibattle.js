@@ -129,41 +129,41 @@ export default class Game extends React.Component {
 
         const plus5 = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -10,
+                points:this.state.points -5,
                 pointsPerClick: this.state.pointsPerClick+5
             })}}>
-            <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
+            <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (5 points)</p></div>
 
         const plus100 = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -100,
+                points:this.state.points -50,
                 pointsPerClick: this.state.pointsPerClick+50
             })}}>
-            <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(100 points)</p></div>
+            <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(50 points)</p></div>
 
         const life = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -1000,
+                points:this.state.points - 6*this.state.pointsPerClick,
                 lifes: this.state.lifes+1
             })}}>
-            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
+            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>({6*this.state.pointsPerClick} points)</p> </div>
 
         const plus25 = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -50,
+                points:this.state.points -25,
                 pointsPerClick: this.state.pointsPerClick+25
             })}}>
-            <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
+            <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (25 points)</p></div>
 
         const upgrade = [];
-        if (this.state.points>=10) upgrade.push(plus5);
+        if (this.state.points>=5) upgrade.push(plus5);
 
-        if (this.state.points>=50) upgrade.push(plus25);
+        if (this.state.points>=25) upgrade.push(plus25);
 
-        if (this.state.points>=100) upgrade.push(plus100);
+        if (this.state.points>=50) upgrade.push(plus100);
 
 
-        if (this.state.points>=500) upgrade.push(life);
+        if (this.state.points>=(6*this.state.pointsPerClick)) upgrade.push(life);
 
 
         return ( <div className={"upgrade"}>{upgrade}</div>)

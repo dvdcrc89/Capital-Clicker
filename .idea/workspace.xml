@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f2d45b-f582-44c2-92c4-866c399b4541" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/multibattle.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/multibattle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -90,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -111,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            <state relative-caret-position="221">
+              <caret line="148" column="137" selection-start-line="148" selection-start-column="137" selection-end-line="148" selection-end-column="137" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -158,8 +157,8 @@
         <option value="$PROJECT_DIR$/imports/routes/appRouter.js" />
         <option value="$PROJECT_DIR$/imports/api/battle.js" />
         <option value="$PROJECT_DIR$/imports/ui/game.js" />
-        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
         <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
       </list>
     </option>
   </component>
@@ -294,12 +293,12 @@
       <updated>1523262293871</updated>
       <workItem from="1523262299942" duration="5498000" />
       <workItem from="1523351127743" duration="21455000" />
-      <workItem from="1523736071915" duration="29427000" />
+      <workItem from="1523736071915" duration="30082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56380000" />
+    <option name="totallyTimeSpent" value="57035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -606,20 +605,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="414" column="14" selection-start-line="414" selection-start-column="14" selection-end-line="414" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="148" column="137" selection-start-line="148" selection-start-column="137" selection-end-line="148" selection-end-column="137" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
