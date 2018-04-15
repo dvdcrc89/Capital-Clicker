@@ -18,7 +18,7 @@ export default class Ranking extends React.Component {
     componentDidMount(){
         this.leaderboardTracker=Tracker.autorun(()=>{
             Meteor.subscribe('leaderboard');
-            const ranking=Leaderboard.find({},{sort:{points:-1} , limit:25}).fetch();
+            const ranking=Leaderboard.find({},{sort:{points:-1} , limit:10}).fetch();
             this.setState({ranking});
 
         });
@@ -38,7 +38,7 @@ export default class Ranking extends React.Component {
                 <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>history.push('/game')}/>
 
                 <div className={"ranking"}>
-                    <h1>Leaderboard Top 25</h1>
+                    <h1>Leaderboard Top 10</h1>
                 {this.fetchData()}
             </div>
             </div>);

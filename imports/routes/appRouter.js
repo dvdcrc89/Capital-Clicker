@@ -7,6 +7,7 @@ import Login from "../ui/login";
 import {Router, Switch, Route} from 'react-router-dom';
 import Game from  '../ui/game';
 import Ranking from '../ui/ranking'
+import Multibattle from '../ui/multibattle';
 
 export const history = createHistory();
 
@@ -40,6 +41,9 @@ export const AppRouter = () => (
 
             <Route exact path="/game" component={Game}/>
             <Route exact path="/leaderboard" component={Ranking}/>
+            <Route exact path="/battle" component={Multibattle}/>
+
+
 
 
             {/*<Route component={NotFound}/>*/}

@@ -5,6 +5,10 @@ import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
 import ReactPlayer from 'react-player';
 import {capitals} from './capital'
+import {Battle} from "../api/battle";
+import {Leaderboard} from "../api/leaderboard";
+import {Tracker} from "meteor/tracker";
+
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
@@ -12,8 +16,8 @@ const questions = capitals.map((cap) =>{
         question: cap.country,
         answer: cap.city,
         wrong: shuffle(capitals)[0].city
-            })
     })
+})
 
 
 
@@ -23,18 +27,38 @@ export default class Game extends React.Component {
         this.state={
             current:shuffle(questions)[0],
             pointsPerClick:1,
-            lifes: 4,
+            lifes: 8,
             points:0,
             state:0,
-            message:null
+            message:null,
+            ranking:[]
         }
+    }
+    componentDidMount(){
+        this.battleTracker=Tracker.autorun(()=>{
+            Meteor.subscribe('battle');
+            const ranking=Battle.find({},{sort:{points:-1} , limit:10}).fetch();
+            this.setState({ranking});
+
+        });
+
+    }
+    componentWillUnmount(){
+        Meteor.call('battle.drop');
+        this.battleTracker.stop();
+    }
+    fetchData(){
+        const results = this.state.ranking;
+
+        return (results.map((result)=>{ return (<div className={"score-battle"}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
     }
 
     reset(){
+        Meteor.call('battle.join');
         this.setState({
             current:shuffle(questions)[0],
             pointsPerClick:1,
-            lifes: 4,
+            lifes: 8,
             points:0,
             state:1
         })
@@ -45,7 +69,7 @@ export default class Game extends React.Component {
     }
 
     getRight(){
-
+        Meteor.call('battle.add',this.state.pointsPerClick);
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
             points: this.state.points + this.state.pointsPerClick,
@@ -68,29 +92,29 @@ export default class Game extends React.Component {
     }
 
     endGame(){
-                Meteor.call("leaderboard.insert",this.state.points);
-                this.setState({
-                    state:2
-                })
-        }
+        Meteor.call('battle.drop');
+        this.setState({
+            state:2
+        })
+    }
 
     shoufflePicks(){
 
         const answersPicks = [{
-                answer: <div className={"answer1"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
-             },
+            answer: <div className={"answer1-battle"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
+        },
             {
-                answer:  <div className={"answer1"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
+                answer:  <div className={"answer1-battle"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
             }];150
 
         shuffle(answersPicks);
         return (
-            <div className={"game"}>
-                <div className={"question"}><p className={"word"}> {this.state.current.question}</p></div>
+            <div className={"game-battle"}>
+                <div className={"question-battle"}><p className={"word"}> {this.state.current.question}</p></div>
 
                 <div className={"answers"}>
-                {answersPicks[0].answer}
-                {answersPicks[1].answer}
+                    {answersPicks[0].answer}
+                    {answersPicks[1].answer}
                 </div>
 
             </div>)
@@ -102,10 +126,10 @@ export default class Game extends React.Component {
 
         const plus5 = <div className={"up"} onClick={()=>{
             this.setState({
-            points:this.state.points -10,
-            pointsPerClick: this.state.pointsPerClick+5
-        })}}>
-        <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
+                points:this.state.points -10,
+                pointsPerClick: this.state.pointsPerClick+5
+            })}}>
+            <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
 
         const plus100 = <div className={"up"} onClick={()=>{
             this.setState({
@@ -146,12 +170,9 @@ export default class Game extends React.Component {
 
     renderMenu(){
         return (<div className={"menu"}>
-            <h1> Game Menu</h1>
-            <div className={"menu-odd"} onClick={this.reset.bind(this)}>Start Game</div>
-            <div className={"menu-even"} onClick={()=>history.push('/leaderboard')}>Leaderboard</div>
-            <div className={"menu-odd"} onClick={()=>history.push('/battle')}>Multy-Players Battle</div>
-            <div className={"menu-even"} onClick={this.reset.bind(this)}>Settings</div>
-            <div className={"menu-odd"} onClick={this.onLogout.bind(this)}>Logout</div>
+            <h1> Multi Battle</h1>
+            <div className={"menu-odd"} onClick={this.reset.bind(this)}>Join the battle</div>
+
         </div>)
     }
 
@@ -161,40 +182,46 @@ export default class Game extends React.Component {
 
         switch(this.state.state){
             case 0:
-                    return (this.renderMenu())
+                Meteor.call('battle.drop');
+                return (this.renderMenu())
             case 1:
-                    return (
-                        <div className={"fullScreen"}>
-                        <div className={"canvas"}>
+                return (
+                    <div className={"fullScreen"}>
+                        <div className={"ranking-battle upgradeSection"}>
+                            <h1>Players online</h1>
+                            {this.fetchData()}
+                        </div>
+                        <div className={"canvas-battle"}>
 
                             <div className={"stats"}>
                                 <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
 
                                 <p>Points: {this.state.points}</p>
-                                    <p>Points per Click: {this.state.pointsPerClick}</p>
-                                    <p> Lifes: {this.state.lifes}</p>
-                                </div>
-                                {this.shoufflePicks()}
-                                <div className={"footerGame"}>
-                                    <p>   {this.state.message}</p>
-                                </div>
-                         </div>
-                            <div className={"upgradeSection"}>
-
-                                <h1>Upgrades</h1>
-                                {this.buyUpgrade()}
+                                <p>Points per Click: {this.state.pointsPerClick}</p>
+                                <p> Lifes: {this.state.lifes}</p>
                             </div>
+
+                            {this.shoufflePicks()}
+                            {/*<div className={"footerGame"}>*/}
+                                {/*<p>   {this.state.message}</p>*/}
+                            {/*</div>*/}
                         </div>
-                                )
-             case 2:
-                    return (
-                        <div className={"wrapper"}>
+                        <div className={"upgradeSection"}>
+
+                            <h1>Upgrades</h1>
+                            {this.buyUpgrade()}
+                        </div>
+                    </div>
+                )
+            case 2:
+                return (
+                    <div className={"wrapper"}>
                         <div className={"endedGame"}>
                             <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
 
                             <h1>Congratulation! You Scored {this.state.points} Points</h1>
-                            </div>
-                        </div>)
+                        </div>
+                    </div>)
         }
 
     }
@@ -202,7 +229,7 @@ export default class Game extends React.Component {
 
     render(){
         return(<div className={"wrapper"}>
-                    {this.parseGame()}
+            {this.parseGame()}
         </div>)
     }
 }
