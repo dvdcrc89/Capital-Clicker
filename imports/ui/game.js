@@ -8,13 +8,16 @@ import {capitals} from './capital'
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
+
+    let wrong = shuffle(capitals)[0].city;
+    while(cap.city==wrong) wrong = shuffle(capitals)[0].city;
     return ({
         question: cap.country,
         answer: cap.city,
-        wrong: shuffle(capitals)[0].city
+        wrong: wrong
+
             })
     })
-
 
 
 export default class Game extends React.Component {
@@ -150,7 +153,7 @@ export default class Game extends React.Component {
             <div className={"menu-odd"} onClick={this.reset.bind(this)}>Start Game</div>
             <div className={"menu-even"} onClick={()=>history.push('/leaderboard')}>Leaderboard</div>
             <div className={"menu-odd"} onClick={()=>history.push('/battle')}>Multy-Players Battle</div>
-            <div className={"menu-even"} onClick={this.reset.bind(this)}>Settings</div>
+            <div className={"menu-even"} onClick={()=>history.push('/halloffame')}>Hall of Fame</div>
             <div className={"menu-odd"} onClick={this.onLogout.bind(this)}>Logout</div>
         </div>)
     }

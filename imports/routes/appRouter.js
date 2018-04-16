@@ -8,6 +8,7 @@ import {Router, Switch, Route} from 'react-router-dom';
 import Game from  '../ui/game';
 import Ranking from '../ui/ranking'
 import Multibattle from '../ui/multibattle';
+import RankingHero from '../ui/ranking_hero';
 
 export const history = createHistory();
 
@@ -41,6 +42,7 @@ export const AppRouter = () => (
 
             <Route exact path="/game" component={Game}/>
             <Route exact path="/leaderboard" component={Ranking}/>
+            <Route exact path="/halloffame" component={RankingHero}/>
             <Route exact path="/battle" component={Multibattle}/>
 
 

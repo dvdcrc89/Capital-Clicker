@@ -12,16 +12,20 @@ import FlipMove from 'react-flip-move';
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
+
+    let wrong = shuffle(capitals)[0].city;
+    while(cap.city===wrong) wrong = shuffle(capitals)[0].city;
     return ({
         question: cap.country,
         answer: cap.city,
-        wrong: shuffle(capitals)[0].city
+        wrong: wrong
+
     })
 })
 
 
 
-export default class Game extends React.Component {
+export default class Multibattle extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -51,7 +55,6 @@ export default class Game extends React.Component {
 
         return (this.state.ranking.map((result)=>{
             let classN="score-battle";
-            console.log(Meteor.userId() +"  " + result.userId);
             if (result.userId===Meteor.userId()) classN='you score-battle';
             return (<div className={classN} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
     }
@@ -95,6 +98,7 @@ export default class Game extends React.Component {
     }
 
     endGame(){
+        Meteor.call("leaderboardhero.insert",this.state.points);
         Meteor.call('battle.drop');
         this.setState({
             state:2
@@ -178,6 +182,8 @@ export default class Game extends React.Component {
 
     renderMenu(){
         return (<div className={"menu"}>
+            <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>history.push("/")}/>
+
             <h1> Multi Battle</h1>
             <div className={"menu-odd"} onClick={this.reset.bind(this)}>Join the battle </div>
             <p>Players online: {this.state.ranking.length} </p>
