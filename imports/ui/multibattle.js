@@ -3,6 +3,7 @@ import Signup from "./signup";
 import {Accounts} from "meteor/accounts-base";
 import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
+import {country} from "./country";
 import {capitals} from './capital'
 import {Battle} from "../api/battle";
 import {Leaderboard} from "../api/leaderboard";
@@ -14,13 +15,24 @@ const shuffle = require('shuffle-array');
 const questions = capitals.map((cap) =>{
 
     let wrong = shuffle(capitals)[0].city;
-    while(cap.city===wrong) wrong = shuffle(capitals)[0].city;
+    while(cap.city==wrong) wrong = shuffle(capitals)[0].city;
+    let country_flag=undefined;
+    for(key in country){
+        if (country[key].country===cap.country) {
+            country_flag = "./../flags/"+country[key].flag.toLowerCase()+".png";
+
+
+        }
+
+    }
     return ({
         question: cap.country,
         answer: cap.city,
-        wrong: wrong
+        wrong: wrong,
+        flag: country_flag
 
     })
+
 })
 
 
@@ -35,7 +47,7 @@ export default class Multibattle extends React.Component {
             points:0,
             state:0,
             message:null,
-            ranking:[]
+            ranking:[],
         }
     }
     componentDidMount(){
@@ -66,7 +78,7 @@ export default class Multibattle extends React.Component {
             pointsPerClick:1,
             lifes: 8,
             points:0,
-            state:1
+            state:1,
         })
     }
 
@@ -79,7 +91,7 @@ export default class Multibattle extends React.Component {
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
             points: this.state.points + this.state.pointsPerClick,
-            message: "Well done! The capital of " + this.state.current.question +" is "+ this.state.current.answer
+            message: "WELL DONE!!"
         })
     }
 
@@ -90,7 +102,7 @@ export default class Multibattle extends React.Component {
             this.setState({
                 lifes: this.state.lifes - 1,
                 current: shuffle.pick((questions), {picks: '1'}),
-                message: "You have got it wrong this time, The capital of " + this.state.current.question +" is "+ this.state.current.answer
+                message: "WROOONG!!!"
 
 
             })
@@ -117,8 +129,12 @@ export default class Multibattle extends React.Component {
         shuffle(answersPicks);
         return (
             <div className={"game-battle"}>
-                <div className={"question-battle"}><p className={"word"}> {this.state.current.question}</p></div>
-
+                <div className={"question"}>
+                <div className={"flag"}>
+                    <img src={this.state.current.flag}/>
+                    <p className={"centered"}> {this.state.current.question}</p>
+                </div>
+            </div>
                 <div className={"answers"}>
                     {answersPicks[0].answer}
                     {answersPicks[1].answer}

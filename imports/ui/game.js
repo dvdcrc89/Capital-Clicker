@@ -5,19 +5,31 @@ import {Meteor} from "meteor/meteor";
 import {history} from "../routes/appRouter";
 import ReactPlayer from 'react-player';
 import {capitals} from './capital'
+import {country} from "./country";
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
 
     let wrong = shuffle(capitals)[0].city;
     while(cap.city==wrong) wrong = shuffle(capitals)[0].city;
+    let country_flag=undefined;
+    for(key in country){
+        if (country[key].country===cap.country) {
+            country_flag = "./../flags/"+country[key].flag.toLowerCase()+".png";
+
+
+        }
+
+    }
     return ({
         question: cap.country,
         answer: cap.city,
-        wrong: wrong
+        wrong: wrong,
+        flag: country_flag
 
-            })
     })
+
+})
 
 
 export default class Game extends React.Component {
@@ -80,24 +92,29 @@ export default class Game extends React.Component {
     shoufflePicks(){
 
         const answersPicks = [{
-                answer: <div className={"answer1"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
-             },
+            answer: <div className={"answer1-battle"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
+        },
             {
-                answer:  <div className={"answer1"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
+                answer:  <div className={"answer1-battle"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
             }];150
 
         shuffle(answersPicks);
         return (
             <div className={"game"}>
-                <div className={"question"}><p className={"word"}> {this.state.current.question}</p></div>
-
+                <div className={"question"}>
+                    <div className={"flag"}>
+                        <img src={this.state.current.flag}/>
+                        <p className={"centered"}> {this.state.current.question}</p>
+                    </div>
+                </div>
                 <div className={"answers"}>
-                {answersPicks[0].answer}
-                {answersPicks[1].answer}
+                    {answersPicks[0].answer}
+                    {answersPicks[1].answer}
                 </div>
 
             </div>)
     }
+
 
 
     buyUpgrade() {
