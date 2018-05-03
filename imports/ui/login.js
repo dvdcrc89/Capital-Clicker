@@ -47,12 +47,12 @@ export default class Login extends React.Component {
                 <h1>Login to Capital Clicker</h1>
                 <p>Please enter your username and password and click "Login" or click "Sign Up" to register!</p>
                 <form onSubmit={this.onSubmit.bind(this)} noValidate>
-                    <ul><input type="email" name="email" ref="email" placeholder="Username"/></ul>
-                    <ul><input type="password" name="password" ref="password" placeholder="Password"/></ul>
+                    <input type="email" name="email" ref="email" placeholder="Username"/>
+                    <input type="password" name="password" ref="password" placeholder="Password"/>
                     <button>Login</button>
-					<button><Link to="/signup">Sign Up</Link></button>
                 </form>
-                {this.state.error ? <p>{this.state.error}</p> : undefined}
+                {this.state.error ? <p><span class="red">{this.state.error}</span></p> : undefined}
+                <p>Do not have an account? No worries! <br/><a href="/signup">Register here</a></p>
             </div>
 
         );

@@ -49,12 +49,12 @@ export default class Signup extends React.Component{
                 <h1>Sign up to Capital Clicker</h1>
                 <p>Please enter your desired Username and Password and click "Sign Up" to start playing Capital Clicker </p>
                 <form onSubmit={this.onSubmit.bind(this)} noValidate>
-                    <ul> <input type="email" name="email" ref="email" placeholder="Username"/></ul>
-                   <ul> <input type="password" name="password" ref="password" placeholder="Password"/></ul>
-                    <button>Sign Up</button>
-                    <button><Link to="/">Login</Link></button>
+                    <input type="email" name="email" ref="email" placeholder="Username"/>
+                    <input type="password" name="password" ref="password" placeholder="Password"/>
+                    <button>Register</button>
                 </form>
-                {this.state.error ? <p>{this.state.error}</p> : undefined}
+                {this.state.error ? <p><span class="red">{this.state.error}</span></p> : undefined}
+                <p>Already have an account?<br/><a href="/">Login here</a></p>
             </div>
              );
     }
