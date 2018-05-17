@@ -47,6 +47,8 @@ export default class Game extends React.Component {
     }
 
     reset(){
+        let audio = new Audio('soundtrack.mp3');
+        audio.play();
         this.setState({
             current:shuffle(questions)[0],
             pointsPerClick:1,
@@ -198,6 +200,7 @@ export default class Game extends React.Component {
                                     <p>Points per Click: {this.state.pointsPerClick}</p>
                                     <p> Lifes: {this.state.lifes}</p>
                                 </div>
+
                                 {this.shoufflePicks()}
                                 <div className={"footerGame"}>
                                     <p>   {this.state.message}</p>
