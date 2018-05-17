@@ -142,7 +142,7 @@ export default class Game extends React.Component {
 
         const life = <div className={"up"} onClick={()=>{
             this.setState({
-                points:this.state.points -1000,
+                points:this.state.points -500,
                 lifes: this.state.lifes+1
             })}}>
             <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
