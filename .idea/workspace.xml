@@ -2,265 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f2d45b-f582-44c2-92c4-866c399b4541" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/imports/ui/country.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ae.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/af.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ai.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/al.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/am.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/aq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/as.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/at.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/au.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/aw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ax.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/az.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/be.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/br.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/by.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/bz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ci.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/co.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/cz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/dj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/dk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/dm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/do.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/dz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/eg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/eh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/er.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/es.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/et.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/fr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gb-eng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gb-nir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gb-sct.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gb-wls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/gy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/hk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/hm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/hn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/hr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ht.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/hu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/id.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/il.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/im.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/io.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/iq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/is.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/it.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/je.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/jm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/jo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/jp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ki.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/km.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ky.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/kz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/la.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/li.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/lv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/md.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ml.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ms.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/my.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/mz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/na.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ni.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/no.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/np.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/nz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/om.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/pw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/py.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/qa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/re.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/rs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/rw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/se.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/si.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/so.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/st.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/sz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/td.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/th.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/to.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/tz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ua.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/um.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/uy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/uz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/va.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/vc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/vg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/vi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/vn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/vu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/wf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ws.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/xk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/ye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/yt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/za.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/zm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/flags/zw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imports/ui/liveMultiplayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/capital.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/capital.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imports/ui/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/multibattle.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/multibattle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -275,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state>
+              <caret selection-end-line="5" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <marker date="1524393447627" expanded="true" signature="5243:5347" ph="..." />
@@ -306,18 +49,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ranking.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ranking_hero.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/ranking_hero.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -333,7 +64,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="330">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -342,7 +73,7 @@
       <file leaf-file-name="battle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/battle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="180">
               <caret line="13" selection-start-line="13" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -369,11 +100,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="144" lean-forward="true" selection-start-line="119" selection-start-column="4" selection-end-line="144" />
+            <state relative-caret-position="135">
+              <caret line="210" column="30" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="liveMultiplayer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/liveMultiplayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -386,6 +129,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>answ</find>
+      <find>menu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -414,8 +158,9 @@
         <option value="$PROJECT_DIR$/imports/routes/appRouter.js" />
         <option value="$PROJECT_DIR$/imports/ui/ranking_hero.js" />
         <option value="$PROJECT_DIR$/client/main.css" />
-        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
         <option value="$PROJECT_DIR$/imports/ui/game.js" />
+        <option value="$PROJECT_DIR$/imports/ui/liveMultiplayer.js" />
+        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
       </list>
     </option>
   </component>
@@ -431,10 +176,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="31" />
+    <option name="x" value="111" />
+    <option name="y" value="128" />
     <option name="width" value="1291" />
-    <option name="height" value="668" />
+    <option name="height" value="640" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -550,27 +295,29 @@
       <workItem from="1523895024103" duration="2147000" />
       <workItem from="1523917923385" duration="71000" />
       <workItem from="1524390733583" duration="1502000" />
+      <workItem from="1526240713861" duration="855000" />
+      <workItem from="1526499256997" duration="2168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62327000" />
+    <option name="totallyTimeSpent" value="65350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15987702" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21752498" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -591,23 +338,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/imports/ui/multibattle.js</url>
-          <line>137</line>
+          <line>126</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/ranking_hero.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -674,9 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="22" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/battle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="180">
           <caret line="13" selection-start-line="13" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -984,28 +715,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
+    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="144" lean-forward="true" selection-start-line="119" selection-start-column="4" selection-end-line="144" />
+        <state>
+          <caret selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1524393447627" expanded="true" signature="5243:5347" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/liveMultiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
+    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="210" column="30" selection-start-line="210" selection-start-column="30" selection-end-line="210" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1524393447627" expanded="true" signature="5243:5347" ph="..." />
           </folding>
         </state>
       </provider>

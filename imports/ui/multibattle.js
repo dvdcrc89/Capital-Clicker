@@ -9,7 +9,7 @@ import {Battle} from "../api/battle";
 import {Leaderboard} from "../api/leaderboard";
 import {Tracker} from "meteor/tracker";
 import FlipMove from 'react-flip-move';
-
+import LiveMultiplayer from './liveMultiplayer';
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
@@ -47,29 +47,18 @@ export default class Multibattle extends React.Component {
             points:0,
             state:0,
             message:null,
-            ranking:[],
+
         }
     }
     componentDidMount(){
-        this.battleTracker=Tracker.autorun(()=>{
-            Meteor.subscribe('battle');
-            const ranking=Battle.find({},{sort:{points:-1} , limit:10}).fetch();
-            this.setState({ranking});
 
-        });
 
     }
     componentWillUnmount(){
         Meteor.call('battle.drop');
         this.battleTracker.stop();
     }
-    fetchData(){
 
-        return (this.state.ranking.map((result)=>{
-            let classN="score-battle";
-            if (result.userId===Meteor.userId()) classN='you score-battle';
-            return (<div className={classN} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
-    }
 
     reset(){
         Meteor.call('battle.join');
@@ -202,7 +191,7 @@ export default class Multibattle extends React.Component {
 
             <h1> Multi Battle</h1>
             <div className={"menu-odd"} onClick={this.reset.bind(this)}>Join the battle </div>
-            <p>Players online: {this.state.ranking.length} </p>
+            <p>Players online: {Battle.find().fetch().length} </p>
         </div>)
     }
 
@@ -218,10 +207,7 @@ export default class Multibattle extends React.Component {
                 return (
                     <div className={"fullScreen"}>
                         <div className={"ranking-battle upgradeSection"}>
-                            <h1>Players online</h1>
-                            <FlipMove duration={750} easing="ease-out" maintainContainerHeight="true">
-                                {this.fetchData()}
-                            </FlipMove>
+                            <LiveMultiplayer/>
                         </div>
                         <div className={"canvas-battle"}>
 
