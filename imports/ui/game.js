@@ -171,14 +171,22 @@ export default class Game extends React.Component {
     }
 
     renderMenu(){
-        return (<div className={"menu"}>
+        return (
+            <div>
+                <h1 className="animate three title">
+                    <span>C</span><span>a</span><span>p</span><span>i</span><span>t</span><span>a</span><span>l</span> &nbsp;
+                    <span>C</span><span>l</span><span>i</span><span>c</span><span>k</span><span>e</span><span>r</span></h1>
+            <div className={"menu"}>
+
             <h1> Game Menu</h1>
+
             <div className={"menu-odd"} onClick={this.reset.bind(this)}>Start Game</div>
             <div className={"menu-even"} onClick={()=>history.push('/leaderboard')}>Leaderboard</div>
             <div className={"menu-odd"} onClick={()=>history.push('/battle')}>Multy-Players Battle</div>
             <div className={"menu-even"} onClick={()=>history.push('/halloffame')}>Hall of Fame</div>
             <div className={"menu-odd"} onClick={this.onLogout.bind(this)}>Logout</div>
-        </div>)
+        </div>
+            </div>)
     }
 
 
