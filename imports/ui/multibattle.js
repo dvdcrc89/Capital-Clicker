@@ -77,6 +77,8 @@ export default class Multibattle extends React.Component {
     }
 
     getRight(){
+        let audio = new Audio('right.mp3');
+        audio.play();
         Meteor.call('battle.add',this.state.pointsPerClick);
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
@@ -86,6 +88,8 @@ export default class Multibattle extends React.Component {
     }
 
     getWrong(){
+        let audio = new Audio('wrong.mp3');
+        audio.play();
         if (this.state.lifes===0){
             this.endGame();
         } else {
@@ -231,9 +235,7 @@ export default class Multibattle extends React.Component {
                             </div>
 
                                 {this.shoufflePicks()}
-                            <div className={"footerGame"}>
-                                <p>   {this.state.message}</p>
-                            </div>
+
                         </div>
                         <div className={"upgradeSection"}>
 

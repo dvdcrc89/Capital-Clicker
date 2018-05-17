@@ -8,6 +8,7 @@ import {capitals} from './capital'
 import {country} from "./country";
 const shuffle = require('shuffle-array');
 
+
 const questions = capitals.map((cap) =>{
 
     let wrong = shuffle(capitals)[0].city;
@@ -60,7 +61,8 @@ export default class Game extends React.Component {
     }
 
     getRight(){
-
+        let audio = new Audio('right.mp3');
+        audio.play();
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
             points: this.state.points + this.state.pointsPerClick,
@@ -69,6 +71,8 @@ export default class Game extends React.Component {
     }
 
     getWrong(){
+        let audio = new Audio('wrong.mp3');
+        audio.play();
         if (this.state.lifes===0){
             this.endGame();
         } else {
@@ -103,7 +107,7 @@ export default class Game extends React.Component {
             <div className={"game"}>
                 <div className={"question"}>
                     <div className={"flag"}>
-                        <img src={this.state.current.flag}/>
+                        <img src={this.state.current.flag} />
                         <p className={"centered"}> {this.state.current.question}</p>
                     </div>
                 </div>
