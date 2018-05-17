@@ -10,6 +10,7 @@ import {Leaderboard} from "../api/leaderboard";
 import {Tracker} from "meteor/tracker";
 import FlipMove from 'react-flip-move';
 import LiveMultiplayer from './liveMultiplayer';
+import ReactCountdownClock from 'react-countdown-clock'
 const shuffle = require('shuffle-array');
 
 const questions = capitals.map((cap) =>{
@@ -56,7 +57,7 @@ export default class Multibattle extends React.Component {
     }
     componentWillUnmount(){
         Meteor.call('battle.drop');
-        this.battleTracker.stop();
+
     }
 
 
@@ -106,6 +107,15 @@ export default class Multibattle extends React.Component {
         })
     }
 
+    getClock(){
+        return(
+            <ReactCountdownClock seconds={180}
+                                 color="White"
+                                 alpha={0.9}
+                                 size={100}
+                                 onComplete={this.endGame.bind(this)} />
+        )
+    }
     shoufflePicks(){
 
         const answersPicks = [{
@@ -207,19 +217,20 @@ export default class Multibattle extends React.Component {
                 return (
                     <div className={"fullScreen"}>
                         <div className={"ranking-battle upgradeSection"}>
+
                             <LiveMultiplayer/>
                         </div>
                         <div className={"canvas-battle"}>
 
                             <div className={"stats"}>
                                 <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>history.push("/")}/>
-
+                                {this.getClock()}
                                 <p>Points: {this.state.points}</p>
                                 <p>Points per Click: {this.state.pointsPerClick}</p>
                                 <p> Lifes: {this.state.lifes}</p>
                             </div>
 
-                            {this.shoufflePicks()}
+                                {this.shoufflePicks()}
                             <div className={"footerGame"}>
                                 <p>   {this.state.message}</p>
                             </div>

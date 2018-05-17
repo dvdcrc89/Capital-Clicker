@@ -8,11 +8,13 @@
     "@babel/runtime": "^7.0.0-beta.36",
     "meteor-node-stubs": "^0.3.2",
     "react": "^16.2.0",
+    "react-countdown-clock": "^2.4.0",
     "react-dom": "^16.2.0",
     "react-flip-move": "^3.0.1",
     "react-player": "^1.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-timer": "^1.0.2",
     "shortid": "^2.2.8",
     "shuffle-array": "^1.0.1",
     "simpl-schema": "^1.4.2"
