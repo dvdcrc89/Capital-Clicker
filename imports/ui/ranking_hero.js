@@ -30,7 +30,7 @@ export default class RankingHero extends React.Component {
     fetchData(){
         const results = this.state.ranking;
 
-       return (results.map((result)=>{ return (<div className={"score"}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
+       return (results.map((result)=>{ return (<div className={"score"}><p>{result.userName}</p><p className={"red"}>{result.points} <img className={"star"}  src={"./../img/star.png"}/></p></div>)}))
     }
     render(){
         return(
