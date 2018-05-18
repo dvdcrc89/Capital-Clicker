@@ -13,7 +13,7 @@ import LiveMultiplayer from './liveMultiplayer';
 import ReactCountdownClock from 'react-countdown-clock'
 const shuffle = require('shuffle-array');
 let audio = new Audio('battle.mp3');
-
+let keeper=[];
 
 const questions = capitals.map((cap) =>{
 
@@ -50,10 +50,12 @@ export default class Multibattle extends React.Component {
             points:0,
             state:0,
             message:null,
+            upgrade:0
 
         }
     }
     componentDidMount(){
+
         audio.play();
 
     }
@@ -72,6 +74,7 @@ export default class Multibattle extends React.Component {
             lifes: 6,
             points:0,
             state:1,
+            upgrade:0
         })
     }
 
@@ -88,7 +91,8 @@ export default class Multibattle extends React.Component {
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
             points: this.state.points + this.state.pointsPerClick,
-            message: "WELL DONE!!"
+            message: "WELL DONE!!",
+            upgrade:0
         })
     }
 
@@ -103,7 +107,8 @@ export default class Multibattle extends React.Component {
             this.setState({
                 lifes: this.state.lifes - 1,
                 current: shuffle.pick((questions), {picks: '1'}),
-                message: "WROOONG!!!"
+                message: "WROOONG!!!",
+                upgrade:0
 
 
             })
@@ -142,14 +147,18 @@ export default class Multibattle extends React.Component {
     }
     shoufflePicks(){
 
-        const answersPicks = [{
-            answer: <div className={"answer1-battle"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
+
+        let answersPicks = [{
+                answer: <div className={"answer1-battle"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
         },
             {
                 answer:  <div className={"answer1-battle"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
-            }];150
+            }];
 
-        shuffle(answersPicks);
+        if(this.state.upgrade<1) {
+            keeper = shuffle(answersPicks);
+        } else answersPicks= keeper;
+
         return (
             <div className={"game-battle"}>
                 <div className={"question"}>
@@ -174,7 +183,8 @@ export default class Multibattle extends React.Component {
             Meteor.call('battle.add',-5);
             this.setState({
                 points:this.state.points -5,
-                pointsPerClick: this.state.pointsPerClick+5
+                pointsPerClick: this.state.pointsPerClick+5,
+                upgrade:1
             })}}>
             <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (5 points)</p></div>
 
@@ -182,7 +192,8 @@ export default class Multibattle extends React.Component {
             Meteor.call('battle.add',-50);
             this.setState({
                 points:this.state.points -50,
-                pointsPerClick: this.state.pointsPerClick+50
+                pointsPerClick: this.state.pointsPerClick+50,
+                upgrade:1
             })}}>
             <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(50 points)</p></div>
 
@@ -190,7 +201,8 @@ export default class Multibattle extends React.Component {
             Meteor.call('battle.add',-( 6*this.state.pointsPerClick));
             this.setState({
                 points:this.state.points - 6*this.state.pointsPerClick,
-                lifes: this.state.lifes+1
+                lifes: this.state.lifes+1,
+                upgrade:1
             })}}>
             <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>({6*this.state.pointsPerClick} points)</p> </div>
 
@@ -199,7 +211,8 @@ export default class Multibattle extends React.Component {
 
             this.setState({
                 points:this.state.points -25,
-                pointsPerClick: this.state.pointsPerClick+25
+                pointsPerClick: this.state.pointsPerClick+25,
+                upgrade:1
             })}}>
             <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (25 points)</p></div>
 

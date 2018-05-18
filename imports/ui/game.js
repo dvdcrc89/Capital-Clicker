@@ -8,7 +8,7 @@ import {capitals} from './capital'
 import {country} from "./country";
 const shuffle = require('shuffle-array');
 let audio = new Audio('soundtrack.mp3');
-
+let keeper=[]
 
 const questions = capitals.map((cap) =>{
 
@@ -43,7 +43,8 @@ export default class Game extends React.Component {
             lifes: 4,
             points:0,
             state:0,
-            message:null
+            message:null,
+            upgrade:0
         }
     }
 
@@ -60,7 +61,9 @@ export default class Game extends React.Component {
             pointsPerClick:1,
             lifes: 4,
             points:0,
-            state:1
+            state:1,
+            upgrade:0
+
         })
     }
 
@@ -75,7 +78,9 @@ export default class Game extends React.Component {
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
             points: this.state.points + this.state.pointsPerClick,
-            message: "Well done! The capital of " + this.state.current.question +" is "+ this.state.current.answer
+            message: "Well done! The capital of " + this.state.current.question +" is "+ this.state.current.answer,
+            upgrade:0
+
         })
     }
 
@@ -89,7 +94,9 @@ export default class Game extends React.Component {
             this.setState({
                 lifes: this.state.lifes - 1,
                 current: shuffle.pick((questions), {picks: '1'}),
-                message: "You have got it wrong this time, The capital of " + this.state.current.question +" is "+ this.state.current.answer
+                message: "You have got it wrong this time, The capital of " + this.state.current.question +" is "+ this.state.current.answer,
+                upgrade:0
+
 
 
             })
@@ -105,14 +112,15 @@ export default class Game extends React.Component {
 
     shoufflePicks(){
 
-        const answersPicks = [{
+        let answersPicks = [{
             answer: <div className={"answer1-battle"} key={"right"} onClick={this.getRight.bind(this)}><p className={"word"}>{this.state.current.answer}</p></div>
         },
             {
                 answer:  <div className={"answer1-battle"} key={"wrong"} onClick={this.getWrong.bind(this)}><p className={"word"}>{this.state.current.wrong}</p></div>
             }];150
 
-        shuffle(answersPicks);
+        if(this.state.upgrade<1) keeper=shuffle(answersPicks);
+            else answersPicks=keeper
         return (
             <div className={"game"}>
                 <div className={"question"}>
@@ -137,28 +145,33 @@ export default class Game extends React.Component {
         const plus5 = <div className={"up"} onClick={()=>{
             this.setState({
             points:this.state.points -10,
-            pointsPerClick: this.state.pointsPerClick+5
+            pointsPerClick: this.state.pointsPerClick+5,
+            upgrade:1
+
         })}}>
         <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
 
         const plus100 = <div className={"up"} onClick={()=>{
             this.setState({
                 points:this.state.points -100,
-                pointsPerClick: this.state.pointsPerClick+50
+                pointsPerClick: this.state.pointsPerClick+50,
+                upgrade:1
             })}}>
             <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(100 points)</p></div>
 
         const life = <div className={"up"} onClick={()=>{
             this.setState({
                 points:this.state.points -500,
-                lifes: this.state.lifes+1
+                lifes: this.state.lifes+1,
+                upgrade:1
             })}}>
             <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
 
         const plus25 = <div className={"up"} onClick={()=>{
             this.setState({
                 points:this.state.points -50,
-                pointsPerClick: this.state.pointsPerClick+25
+                pointsPerClick: this.state.pointsPerClick+25,
+                upgrade:1
             })}}>
             <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
 
