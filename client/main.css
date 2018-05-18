@@ -155,23 +155,23 @@ a.repeat:hover {
 @keyframes sideSlide {
     60% {
         transform: translate(20px, 0) scale(1);
-        color: white;
+        color: orange;
     }
 
     80% {
         transform: translate(20px, 0) scale(1);
-        color: white;
+        color: orange;
     }
 
     99% {
         transform: translate(0) scale(1.2);
-        color: yellow;
+        color: orangered;
     }
 
     100% {
         transform: translate(0) scale(1);
         opacity: 1;
-        color: white;
+        color: orange;
     }
 }
 
@@ -624,9 +624,8 @@ body{
 }
 
 .title{
-    
+    background:  rgba(0,0,0,0.4);
     font-size: 5em;
-    background: none;
     border: none;
 }
 
