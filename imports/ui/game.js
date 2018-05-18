@@ -7,6 +7,7 @@ import ReactPlayer from 'react-player';
 import {capitals} from './capital'
 import {country} from "./country";
 const shuffle = require('shuffle-array');
+let audio = new Audio('soundtrack.mp3');
 
 
 const questions = capitals.map((cap) =>{
@@ -46,9 +47,14 @@ export default class Game extends React.Component {
         }
     }
 
-    reset(){
-        let audio = new Audio('soundtrack.mp3');
+    componentDidMount() {
         audio.play();
+    }
+    componentWillUnmount() {
+        audio.pause();
+    }
+    reset(){
+
         this.setState({
             current:shuffle(questions)[0],
             pointsPerClick:1,

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f2d45b-f582-44c2-92c4-866c399b4541" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/background" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/background" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports/ui/multibattle.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/multibattle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +20,11 @@
       <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="229" column="56" selection-start-line="229" selection-start-column="56" selection-end-line="229" selection-end-column="108" />
+            <state relative-caret-position="135">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-end-line="10" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
+                <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
               </folding>
             </state>
           </provider>
@@ -43,8 +42,8 @@
       <file leaf-file-name="liveMultiplayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/liveMultiplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="38" column="170" selection-start-line="38" selection-start-column="170" selection-end-line="38" selection-end-column="170" />
+            <state relative-caret-position="92">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -76,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -115,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="254" column="171" selection-start-line="254" selection-start-column="118" selection-end-line="254" selection-end-column="171" />
+            <state relative-caret-position="273">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -136,8 +135,9 @@
       <find>getClo</find>
       <find>get</find>
       <find>animate</find>
-      <find>lifes</find>
       <find>background</find>
+      <find>lifes</find>
+      <find>sound</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,11 +164,11 @@
         <option value="$PROJECT_DIR$/imports/routes/appRouter.js" />
         <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/imports/ui/liveMultiplayer.js" />
-        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
-        <option value="$PROJECT_DIR$/imports/ui/game.js" />
         <option value="$PROJECT_DIR$/imports/ui/ranking.js" />
         <option value="$PROJECT_DIR$/imports/ui/ranking_hero.js" />
         <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/ui/game.js" />
+        <option value="$PROJECT_DIR$/imports/ui/multibattle.js" />
       </list>
     </option>
   </component>
@@ -315,7 +315,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78380000" />
+    <option name="totallyTimeSpent" value="79370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -352,7 +352,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/imports/ui/multibattle.js</url>
-          <line>153</line>
+          <line>156</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -368,7 +368,7 @@
           <caret line="175" column="50" selection-start-line="175" selection-start-column="50" selection-end-line="175" selection-end-column="50" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
+            <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
           </folding>
         </state>
       </provider>
@@ -396,7 +396,7 @@
           <caret line="70" column="44" selection-start-line="70" selection-end-line="71" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
+            <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
           </folding>
         </state>
       </provider>
@@ -531,7 +531,7 @@
           <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
+            <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
           </folding>
         </state>
       </provider>
@@ -556,7 +556,7 @@
           <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
+            <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
           </folding>
         </state>
       </provider>
@@ -700,37 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/liveMultiplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="38" column="170" selection-start-line="38" selection-start-column="170" selection-end-line="38" selection-end-column="170" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="254" column="171" selection-start-line="254" selection-start-column="118" selection-end-line="254" selection-end-column="171" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="229" column="56" selection-start-line="229" selection-start-column="56" selection-end-line="229" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1526631756397" expanded="true" signature="5782:5886" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/ranking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -755,6 +724,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="626" column="31" selection-start-line="626" selection-start-column="31" selection-end-line="626" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/liveMultiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <marker date="1526635090173" expanded="true" signature="5865:5969" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

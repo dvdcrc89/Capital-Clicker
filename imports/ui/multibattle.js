@@ -12,6 +12,8 @@ import FlipMove from 'react-flip-move';
 import LiveMultiplayer from './liveMultiplayer';
 import ReactCountdownClock from 'react-countdown-clock'
 const shuffle = require('shuffle-array');
+let audio = new Audio('battle.mp3');
+
 
 const questions = capitals.map((cap) =>{
 
@@ -52,11 +54,12 @@ export default class Multibattle extends React.Component {
         }
     }
     componentDidMount(){
-
+        audio.play();
 
     }
     componentWillUnmount(){
         Meteor.call('battle.drop');
+        audio.pause();
 
     }
 
