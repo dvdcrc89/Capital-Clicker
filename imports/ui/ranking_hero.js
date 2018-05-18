@@ -4,6 +4,7 @@ import {Meteor} from "meteor/meteor";
 import {Leaderboardhero} from "../api/leaderboardhero";
 import {Tracker} from "meteor/tracker";
 import {history} from "../routes/appRouter";
+let audio = new Audio('leaderboard.mp3');
 
 
 export default class RankingHero extends React.Component {
@@ -16,6 +17,7 @@ export default class RankingHero extends React.Component {
         }
     }
     componentDidMount(){
+        audio.play();
         this.leaderboardheroTracker=Tracker.autorun(()=>{
             Meteor.subscribe('leaderboardhero');
             const ranking=Leaderboardhero.find({},{sort:{points:-1} , limit:15}).fetch();
@@ -25,6 +27,7 @@ export default class RankingHero extends React.Component {
 
     }
     componentWillUnmount(){
+        audio.pause();
         this.leaderboardheroTracker.stop();
     }
     fetchData(){
