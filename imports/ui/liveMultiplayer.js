@@ -36,7 +36,7 @@ fetchData(){
     return (this.state.ranking.map((result)=>{
         let classN="score-battle";
         if (result.userId===Meteor.userId()) classN='you score-battle';
-        return (<div className={classN} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} Points</p></div>)}))
+        return (<div className={classN} key={result._id}><p>{result.userName}</p><p className={"red"}>{result.points} <img className={"star"}  src={"./../img/star.png"}/></p></div>)}))
 }
 
 render() {

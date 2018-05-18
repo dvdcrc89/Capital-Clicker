@@ -189,7 +189,19 @@ export default class Game extends React.Component {
             </div>)
     }
 
+    lifes(){
+        const lifes=[];
+        for(i=0;i<this.state.lifes;i++){
+            lifes.push(<img className={"life"}  src={"./../img/life.png"}/>)
+        }
 
+        if(lifes.length>0){
+            return (
+            <div className={"lifes"}>
+                {lifes}
+            </div>)}
+            else return <img className={"life"}  src={"./../img/danger.png"}/>
+    }
 
     parseGame(){
 
@@ -204,10 +216,8 @@ export default class Game extends React.Component {
                             <div className={"stats"}>
                                 <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>this.setState({state:0})}/>
 
-                                <p>Points: {this.state.points}</p>
-                                    <p>Points per Click: {this.state.pointsPerClick}</p>
-                                    <p> Lifes: {this.state.lifes}</p>
-                                </div>
+                                    {/*<p> Lifes: {this.state.lifes}</p>*/}
+                                    </div>
 
                                 {this.shoufflePicks()}
                                 <div className={"footerGame"}>
@@ -215,6 +225,10 @@ export default class Game extends React.Component {
                                 </div>
                          </div>
                             <div className={"upgradeSection"}>
+                                {this.lifes()}
+
+                                <h1>{this.state.points} <img className={"star"}  src={"./../img/star.png"}/></h1>
+                                <h1>{this.state.pointsPerClick}  <img className={"star"}  src={"./../img/star.png"}/> per <img className={"life"}  src={"./../img/click.png"}/></h1>
 
                                 <h1>Upgrades</h1>
                                 {this.buyUpgrade()}

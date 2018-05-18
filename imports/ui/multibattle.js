@@ -44,7 +44,7 @@ export default class Multibattle extends React.Component {
         this.state={
             current:shuffle(questions)[0],
             pointsPerClick:1,
-            lifes: 8,
+            lifes: 6,
             points:0,
             state:0,
             message:null,
@@ -66,7 +66,7 @@ export default class Multibattle extends React.Component {
         this.setState({
             current:shuffle(questions)[0],
             pointsPerClick:1,
-            lifes: 8,
+            lifes: 6,
             points:0,
             state:1,
         })
@@ -101,6 +101,19 @@ export default class Multibattle extends React.Component {
 
             })
         }
+    }
+    lifes(){
+        const lifes=[];
+        for(i=0;i<this.state.lifes;i++){
+            lifes.push(<img className={"life"}  src={"./../img/life.png"}/>)
+        }
+
+        if(lifes.length>0){
+            return (
+                <div className={"lifes"}>
+                    {lifes}
+                </div>)}
+        else return <img className={"life"}  src={"./../img/danger.png"}/>
     }
 
     endGame(){
@@ -229,16 +242,17 @@ export default class Multibattle extends React.Component {
                             <div className={"stats"}>
                                 <img className={"back"}  src={"./../img/back1.svg"} onClick={()=>history.push("/")}/>
                                 {this.getClock()}
-                                <p>Points: {this.state.points}</p>
-                                <p>Points per Click: {this.state.pointsPerClick}</p>
-                                <p> Lifes: {this.state.lifes}</p>
+
                             </div>
 
                                 {this.shoufflePicks()}
 
                         </div>
                         <div className={"upgradeSection"}>
+                            {this.lifes()}
 
+                            <h1>{this.state.points} <img className={"star"}  src={"./../img/star.png"}/></h1>
+                            <h1>{this.state.pointsPerClick}  <img className={"star"}  src={"./../img/star.png"}/> per <img className={"life"}  src={"./../img/click.png"}/></h1>
                             <h1>Upgrades</h1>
                             {this.buyUpgrade()}
                         </div>
