@@ -81,6 +81,8 @@ export default class Multibattle extends React.Component {
 
     getRight(){
         let audio = new Audio('right.mp3');
+        audio.volume=0.7;
+
         audio.play();
         Meteor.call('battle.add',this.state.pointsPerClick);
         this.setState({
@@ -92,6 +94,8 @@ export default class Multibattle extends React.Component {
 
     getWrong(){
         let audio = new Audio('wrong.mp3');
+        audio.volume=0.5;
+
         audio.play();
         if (this.state.lifes===0){
             this.endGame();

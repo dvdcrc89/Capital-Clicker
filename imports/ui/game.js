@@ -70,6 +70,7 @@ export default class Game extends React.Component {
 
     getRight(){
         let audio = new Audio('right.mp3');
+        audio.volume=0.7;
         audio.play();
         this.setState({
             current:shuffle.pick((questions),{picks:'1'}),
@@ -80,6 +81,7 @@ export default class Game extends React.Component {
 
     getWrong(){
         let audio = new Audio('wrong.mp3');
+        audio.volume=0.5;
         audio.play();
         if (this.state.lifes===0){
             this.endGame();
