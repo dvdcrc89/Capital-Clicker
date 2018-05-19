@@ -225,6 +225,7 @@ export default class Multibattle extends React.Component {
                 this.setState({
                     points:0,
                     pointsPerClick: 1000000,
+                    lifes:18,
                     upgrade:1,
                     knowledge:true
                 })}}>

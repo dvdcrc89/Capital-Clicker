@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5f2d45b-f582-44c2-92c4-866c399b4541" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/imports/ui/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imports/ui/multibattle.js" beforeDir="false" afterPath="$PROJECT_DIR$/imports/ui/multibattle.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -105,8 +104,8 @@
       <file leaf-file-name="multibattle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="241" column="42" lean-forward="true" selection-start-line="241" selection-start-column="39" selection-end-line="241" selection-end-column="42" />
+            <state relative-caret-position="570">
+              <caret line="242" column="42" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -302,12 +301,12 @@
       <workItem from="1524390733583" duration="1502000" />
       <workItem from="1526240713861" duration="855000" />
       <workItem from="1526499256997" duration="11660000" />
-      <workItem from="1526734347416" duration="1486000" />
+      <workItem from="1526734347416" duration="2260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86466000" />
+    <option name="totallyTimeSpent" value="87240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -747,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/multibattle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="241" column="42" lean-forward="true" selection-start-line="241" selection-start-column="39" selection-end-line="241" selection-end-column="42" />
+        <state relative-caret-position="570">
+          <caret line="242" column="42" selection-start-line="242" selection-start-column="42" selection-end-line="242" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
