@@ -149,7 +149,7 @@ export default class Game extends React.Component {
             upgrade:1
 
         })}}>
-        <img src={"./../img/compass"}></img><p>COMPASS: POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
+        <img src={"./../img/compass1"}></img><p>POINTS PER CLICK <bold>+5</bold></p><p className={"red"}> (10 points)</p></div>
 
         const plus100 = <div className={"up"} onClick={()=>{
             this.setState({
@@ -157,7 +157,7 @@ export default class Game extends React.Component {
                 pointsPerClick: this.state.pointsPerClick+50,
                 upgrade:1
             })}}>
-            <img src={"./../img/map"}></img><p>SMARTPHONE: POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(100 points)</p></div>
+            <img src={"./../img/map2"}></img><p>POINTS PER CLICK <bold>+50</bold></p><p className={"red"}>(100 points)</p></div>
 
         const life = <div className={"up"} onClick={()=>{
             this.setState({
@@ -165,7 +165,7 @@ export default class Game extends React.Component {
                 lifes: this.state.lifes+1,
                 upgrade:1
             })}}>
-            <img src={"./../img/energy"}></img><p>CHARGER: ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
+            <img src={"./../img/energy"}></img><p>ADD <bold>1</bold> LIFE</p> <p className={"red"}>(500 points)</p> </div>
 
         const plus25 = <div className={"up"} onClick={()=>{
             this.setState({
@@ -173,7 +173,7 @@ export default class Game extends React.Component {
                 pointsPerClick: this.state.pointsPerClick+25,
                 upgrade:1
             })}}>
-            <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
+            <img src={"./../img/ball"}></img><p>POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (50 points)</p></div>
 
         const upgrade = [];
         if (this.state.points>=10) upgrade.push(plus5);
