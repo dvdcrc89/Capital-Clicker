@@ -50,7 +50,8 @@ export default class Multibattle extends React.Component {
             points:0,
             state:0,
             message:null,
-            upgrade:0
+            upgrade:0,
+            knowledge:false
 
         }
     }
@@ -74,7 +75,8 @@ export default class Multibattle extends React.Component {
             lifes: 6,
             points:0,
             state:1,
-            upgrade:0
+            upgrade:0,
+            knowledge:false
         })
     }
 
@@ -216,15 +218,29 @@ export default class Multibattle extends React.Component {
             })}}>
             <img src={"./../img/map1"}></img><p>MAP: POINTS PER CLICK <bold>+25</bold></p><p className={"red"}> (25 points)</p></div>
 
+        const knowledge =
+            <div className={"up"} onClick={()=>{
+                Meteor.call('battle.add',-(this.state.points));
+
+                this.setState({
+                    points:0,
+                    pointsPerClick: 1000000,
+                    upgrade:1,
+                    knowledge:true
+                })}}>
+                <img src={"./../img/brain"}></img><p>YOU ARE READY TO BE A GOD</p><p className={"red"}>(All points)</p></div>
+
         const upgrade = [];
-        if (this.state.points>=5) upgrade.push(plus5);
+        if(this.state.knowledge == false) {
+            if (this.state.points >= 5) upgrade.push(plus5);
 
-        if (this.state.points>=25) upgrade.push(plus25);
+            if (this.state.points >= 25) upgrade.push(plus25);
 
-        if (this.state.points>=50) upgrade.push(plus100);
+            if (this.state.points >= 50) upgrade.push(plus100);
 
 
-        if (this.state.points>=(6*this.state.pointsPerClick)) upgrade.push(life);
+            if (this.state.points >= 100000) upgrade.push(knowledge);
+        } else upgrade.push(<h1>YOU ARE A GOD</h1> )
 
 
         return ( <div className={"upgrade"}>{upgrade}</div>)
